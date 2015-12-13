@@ -21,4 +21,4 @@ email: string
 -tradername must be between 3 and less than 40 characters
 -email must be present
 -email must be unique
-email must be valid
+-email must be valid

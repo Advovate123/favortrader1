@@ -3,7 +3,8 @@ require 'test_helper'
 class FavorTest < ActiveSupport::TestCase
   
   def setup
-    @favor = Favor.new(title: "front-end design", summary: "modern-looking websites for any purpouse", description: "I provide front-end web design
+    @trader = Trader.create(tradername: "john", email: "john@example.com")
+    @favor = @trader.favors.build(title: "front-end design", summary: "modern-looking websites for any purpouse", description: "I provide front-end web design
                        services as well as troubleshooting for any stepbacks that you might be having while building your own.")
   
   end
@@ -11,6 +12,12 @@ class FavorTest < ActiveSupport::TestCase
   test "favor should be valid" do
     assert @favor.valid?
     
+  end
+  
+  test "trader_id should be present" do
+    @favor.trader_id = nil
+    assert_not @favor.valid?
+  
   end
   
   test "title should be valid" do

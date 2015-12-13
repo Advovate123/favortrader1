@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212200207) do
+ActiveRecord::Schema.define(version: 20151213040736) do
 
   create_table "favors", force: :cascade do |t|
-    t.string "title"
-    t.text   "summary"
-    t.text   "description"
+    t.string  "title"
+    t.text    "summary"
+    t.text    "description"
+    t.integer "trader_id"
   end
 
   create_table "traders", force: :cascade do |t|
