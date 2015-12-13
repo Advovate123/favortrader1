@@ -1,28 +1,24 @@
-== README
+testing specs for favors:
+tittle: string
+summary: text
+description: text
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+-title must be present
+-tille must be between 5 characters and less than 100 characters
+-Summary must be present
+-Summary must be between 10 characters and less than 150 characters
+-Description must be present
+-Description must be between 20 and 500 characters
+-Trader_id must be present
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+testing specs for trader:
+tradername: string
+email: string
+
+-tradername must be present
+-tradername must be between 3 and less than 40 characters
+-email must be present
+-email must be unique
+email must be valid
