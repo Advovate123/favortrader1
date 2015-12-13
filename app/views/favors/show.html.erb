@@ -1,0 +1,25 @@
+<p>
+  <h1><%= @favor.title %></h1>
+</p>
+
+<div class= "row">
+  <div class= "col-md-4 pull-right center">
+    <%= gravatar_for @favor.trader, size: 200 %>
+  </div>
+  <p>
+    <h5> Offered to you by: <%= @favor.trader.tradername %></h5>
+  </p>
+</div>
+
+<div class= "col-md-8">
+  <h3><%= @favor.summary %></h3>
+  <div class= "well">
+    <p>
+      <strong>Details:</strong>
+    </p>
+    <%= @favor.description %>
+  </div>
+  
+</div>
+
+<h5><%= link_to "Return to favors listing", favors_path, class: "btn btn-warning btn-small" %></h5>

@@ -1,0 +1,24 @@
+<h1>All favors</h1>
+<hr/>
+
+<% @favors.each do  |favor| %>
+  <div class = "row">
+    
+    <div class = "col-md-2">
+      <selection class = "trader_info_center">
+        <%= gravatar_for favor.trader, size: 100 %>
+        <h5> Trader name: <%= favor.trader.tradername %> </h5>
+        
+      </selection>
+    </div>
+    
+    <div class = "col-lg-8 well">
+      <h4><%= link_to favor.title, favor_path(favor) %></h4>
+      <p><%= favor.summary %></p>
+     
+    
+    </div>
+    <hr/>
+  </div>
+
+<% end %>
